@@ -1,150 +1,118 @@
-# BanDDos - Advanced DDoS Attack Tool
+BanDDos - Herramienta avanzada para ataques DDoS
+Una potente y sofisticada herramienta para ataques de denegación de servicio distribuido (DDoS) desarrollada con Node.js, que incluye múltiples métodos de ataque y compatibilidad con proxy.
 
-A powerful and sophisticated Distributed Denial of Service (DDoS) attack tool built with Node.js, featuring multiple attack methods and proxy support.
+Características
+Métodos de ataque de capa 7:
 
-# Features
+HTTP-FLOOD: Inunda el objetivo con solicitudes HTTP
+BYPASS: Bypass avanzado para protecciones comunes
+GET/POST: Inundación de solicitudes GET/POST estándar
+STRESS: Solicitudes de carga pesada
+SOCKET: Inundación de conexiones WebSocket
+TLS: Inundación de conexiones TLS/SSL
+SLOW: Implementación del ataque Slowloris
+NULL: Ataques de agente de usuario nulo
+COOKIE: Ataques basados ​​en cookies
+BOT: Simula tráfico de bots
+XMLRPC: Inundación de pingback XML-RPC
+Métodos de ataque de capa 4
 
-1. Layer 7 Attack Methods :
-   - HTTP-FLOOD: Floods target with HTTP requests
-   - BYPASS: Advanced bypass for common protections
-   - GET/POST: Standard GET/POST request floods
-   - STRESS: Heavy payload requests
-   - SOCKET: WebSocket connection floods
-   - TLS: TLS/SSL connection floods
-   - SLOW: Slowloris attack implementation
-   - NULL: Null User-Agent attacks
-   - COOKIE: Cookie-based attacks
-   - BOT: Simulates bot traffic
-   - XMLRPC: XML-RPC pingback floods
-
-2. Layer 4 Attack Methods
-   - TCP: TCP SYN flood attacks
-   - UDP: UDP packet floods
-   - SYN: SYN packet floods
-   - VSE: Valve Source Engine query floods
-   - MINECRAFT: Minecraft server attacks
-   - MCBOT: Minecraft bot attacks
-   - CONNECTION: Connection floods
-
-# Key Features
-
-- Multi-threaded attack engine
-- Proxy support (HTTP, SOCKS4, SOCKS5)
-- Auto proxy scraping and checking
-- Customizable request parameters
-- Built-in user agent rotation
-- Cookie management
-- Advanced header spoofing
-- Rate limiting and timeout controls
-- Real-time attack statistics
-
-# Technical Details
-
-- Built on Node.js for high performance
-- Uses native TCP/UDP sockets
-- Implements HTTP/1.1 and HTTP/2
-- Supports SSL/TLS connections
-- Proxy chain implementation
-- Custom protocol implementations
-- Efficient memory management
-- Asynchronous I/O operations
-
-# Installation
-
-```
-# Clone repository
+TCP: Ataques de inundación TCP SYN
+UDP: Inundación de paquetes UDP
+SYN: Inundación de paquetes SYN
+VSE: Inundación de consultas del motor de origen de Valve
+MINECRAFT: Ataques al servidor de Minecraft
+MCBOT: Ataques de bots de Minecraft
+CONNECTION: Inundación de conexiones
+Características principales
+Motor de ataque multihilo
+Compatibilidad con proxy (HTTP, SOCKS4, SOCKS5)
+Proxy automático Extracción y comprobación de datos
+Parámetros de solicitud personalizables
+Rotación de agente de usuario integrada
+Gestión de cookies
+Suplantación avanzada de encabezados
+Limitación de velocidad y controles de tiempo de espera
+Estadísticas de ataques en tiempo real
+Detalles técnicos
+Desarrollado en Node.js para un alto rendimiento
+Utiliza sockets TCP/UDP nativos
+Implementa HTTP/1.1 y HTTP/2
+Compatible con conexiones SSL/TLS
+Implementación de cadena de proxy
+Implementaciones de protocolos personalizados
+Gestión eficiente de memoria
+Operaciones de E/S asíncronas
+Instalación
+# Clonar repositorio
 git clone https://github.com/REXREUS/BanDDoS.git
 
-# Install dependencies
+# Instalar dependencias
 npm install
 
-# Configure settings
+# Configurar ajustes
 cp config.example.json config.json
-```
-
-# Usage
-
-```
-# Layer 7 Attack
+Uso
+# Ataque de capa 7
 npm start <url> <method> <threads> <duration>
 
-# Layer 4 Attack  
-npm start <ip:port> <method> <threads> <duration>
+# Ataque de capa 4
+npm start <ip:port> <method> <threads> <duración>
 
-# With Proxy
-npm start <target> <method> <threads> <duration> <proxy-file>
-```
+# Con proxy
+npm start <destino> <método> <hilos> <duración> <archivo proxy>
+Comando
+Métodos de capa 7
+HTTP_FLOOD: npm start <url> HTTP_FLOOD <hilos> <duración>
+CFB: npm start <url> CFB <hilos> <duración>
+BYPASS: npm start <url> BYPASS <hilos> <duración>
+GET: npm start <url> GET <hilos> <duración>
+POST: npm start <url> POST <hilos> <duración>
+OVH: npm start <url> OVH <hilos> <duración>
+STRESS: npm start <url> STRESS <hilos> <duración>
+DYN: npm start <url> DYN <hilos> <duración>
+SLOW: npm start <url> SLOW <hilos> <duración>
+HEAD: npm start <url> HEAD <hilos> <duración>
+NULL: npm start <url> NULL <hilos> <duración>
+COOKIE: npm start <url> COOKIE <hilos> <duración>
+PPS: npm start <url> PPS <hilos> <duración>
+EVEN: npm start <url> EVEN <hilos> <duración>
+SOCKET_FLOOD: npm start <url> SOCKET_FLOOD <hilos> <duración>
+TLS_FLOOD: npm start <url> TLS_FLOOD <hilos> <duración>
+XMLRPC: npm start <url> XMLRPC <hilos> <duración>
+Métodos de Capa 4
+TCP_FLOOD: npm start <ip:puerto> TCP_FLOOD <hilos> <duración>
+UDP_FLOOD: npm start <ip:puerto> UDP_FLOOD <hilos> <duración>
+SYN_FLOOD: npm start <ip:puerto> SYN_FLOOD <hilos> <duración>
+VSE: npm start <ip:puerto> VSE <hilos> <duración>
+MINECRAFT: npm start <ip:puerto> MINECRAFT <hilos> <duración>
+MCBOT: npm start <ip:puerto> MCBOT <hilos> <duración>
+Con proxy
+Añadir proxy de archivo al comando final:
 
-# Command
+npm start <objetivo> <método> <hilos> <duración> <archivo-proxy>
+Configuración
+Edite config.json para configurar:
 
-### Layer 7 Methods
+Parámetros de ataque predeterminados
+Origenes y tipos de proxy
+Listas de agentes de usuario
+Encabezados de solicitud
+Tiempos de espera de conexión
+Opciones de depuración
+Descargo de responsabilidad
+Esta herramienta es Solo para fines educativos y de prueba. Los usuarios asumen toda la responsabilidad por cualquier mal uso o daño causado. Los desarrolladores no asumen ninguna responsabilidad.
 
-- HTTP_FLOOD: `npm start <url> HTTP_FLOOD <threads> <duration>`
-- CFB: `npm start <url> CFB <threads> <duration>`
-- BYPASS: `npm start <url> BYPASS <threads> <duration>`
-- GET: `npm start <url> GET <threads> <duration>`
-- POST: `npm start <url> POST <threads> <duration>`
-- OVH: `npm start <url> OVH <threads> <duration>`
-- STRESS: `npm start <url> STRESS <threads> <duration>`
-- DYN: `npm start <url> DYN <threads> <duration>`
-- SLOW: `npm start <url> SLOW <threads> <duration>`
-- HEAD: `npm start <url> HEAD <threads> <duration>`
-- NULL: `npm start <url> NULL <threads> <duration>`
-- COOKIE: `npm start <url> COOKIE <threads> <duration>`
-- PPS: `npm start <url> PPS <threads> <duration>`
-- EVEN: `npm start <url> EVEN <threads> <duration>`
-- SOCKET_FLOOD: `npm start <url> SOCKET_FLOOD <threads> <duration>`
-- TLS_FLOOD: `npm start <url> TLS_FLOOD <threads> <duration>`
-- XMLRPC: `npm start <url> XMLRPC <threads> <duration>`
-
-### Layer 4 Methods
-
-- TCP_FLOOD: `npm start <ip:port> TCP_FLOOD <threads> <duration>`
-- UDP_FLOOD: `npm start <ip:port> UDP_FLOOD <threads> <duration>`
-- SYN_FLOOD: `npm start <ip:port> SYN_FLOOD <threads> <duration>`
-- VSE: `npm start <ip:port> VSE <threads> <duration>`
-- MINECRAFT: `npm start <ip:port> MINECRAFT <threads> <duration>`
-- MCBOT: `npm start <ip:port> MCBOT <threads> <duration>`
-
-### With Proxy
-
-Add file proxy in end command:
-
-```
-npm start <target> <method> <threads> <duration> <proxy-file>
-```
-
-# Configuration
-
-Edit config.json to configure:
-
-- Default attack parameters
-- Proxy sources and types
-- User agent lists
-- Request headers
-- Connection timeouts
-- Debug options
-
-# Disclaimer
-
-This tool is for educational and testing purposes only. Users take full responsibility for any misuse or damage caused. The developers assume no liability.
-
-# Contributing
-
-- Fork repository
-- Create feature branch
-- Commit changes
-- Push to branch
-- Create Pull Request
-
-# Author
-
-- Name: AdrianOficial
-- Github: [[github.com/The-DiosBot-MD]](https://github.com/The-DiosBot-MD)
-
-# Acknowledgments
-
-- Original MHDDoS Project
-- Node.js Community
-- All Contributors
-This tool demonstrates advanced networking concepts and should be used responsibly for authorized testing only.
+Contribución
+Bifurcación del repositorio
+Crear rama de funciones
+Confirmar cambios
+Subir a rama
+Crear solicitud de extracción
+Autor
+Nombre: AdrianOficial
+Github: [github.com/The-DiosBot-MD]
+Agradecimientos
+Proyecto original MHDDoS
+Comunidad Node.js
+Todos los colaboradores: Esta herramienta demuestra conceptos avanzados de redes y debe usarse de forma responsable únicamente para pruebas autorizadas.
