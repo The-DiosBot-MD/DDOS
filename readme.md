@@ -45,7 +45,7 @@ Gestión eficiente de memoria
 Operaciones de E/S asíncronas
 Instalación
 # Clonar repositorio
-git clone https://github.com/REXREUS/BanDDoS.git
+git clone https://github.com/The-DiosBot-MD/DDOS.git
 
 # Instalar dependencias
 npm install
