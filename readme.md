@@ -129,10 +129,6 @@ Edit config.json to configure:
 
 This tool is for educational and testing purposes only. Users take full responsibility for any misuse or damage caused. The developers assume no liability.
 
-# License
-
-This project is licensed under MIT License. [[See LICENSE file for details]](https://github.com/REXREUS/BanDDoS/blob/main/LICENSE)
-
 # Contributing
 
 - Fork repository
@@ -143,8 +139,8 @@ This project is licensed under MIT License. [[See LICENSE file for details]](htt
 
 # Author
 
-- Name: REXREUS
-- Github: [[github.com/REXREUS]](https://github.com/REXREUS)
+- Name: AdrianOficial
+- Github: [[github.com/The-DiosBot-MD]](https://github.com/The-DiosBot-MD)
 
 # Acknowledgments
 
